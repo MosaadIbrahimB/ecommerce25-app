@@ -1,3 +1,4 @@
+import 'package:ecommerce25_app/core/configure/route/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/feature/checkout/presentation/widgets/type_credit_card_widget.dart';
@@ -118,7 +119,13 @@ class CustomCardCreditWidget extends StatelessWidget {
           ],
         ),
         SizedBox(height: 20,),
-        ButtonGreenWidget(title: "Confirm and Pay (\$ ${BlocProvider.of<HomeCubit>(context).getTotal()})" ,)
+        ButtonGreenWidget
+          (
+          onTap: (){
+            Navigator.pushReplacementNamed(context, AppRoute.confirm);
+          },
+
+          title: "Confirm and Pay (\$ ${BlocProvider.of<HomeCubit>(context).getTotal()})" ,)
 
       ],
     );

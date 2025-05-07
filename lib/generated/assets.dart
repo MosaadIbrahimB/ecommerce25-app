@@ -11,6 +11,15 @@ class Assets {
   static const String checkoutScudel = 'assets/images/checkout/scudel.png';
   static const String checkoutStander = 'assets/images/checkout/stander.png';
   static const String checkoutTelephon = 'assets/images/checkout/telephon.png';
+  static const String confirmOrderBasket = 'assets/images/confirm_order/basket.png';
+  static const String confirmOrderChat = 'assets/images/confirm_order/chat.png';
+  static const String confirmOrderConfirmed = 'assets/images/confirm_order/confirmed.png';
+  static const String confirmOrderDelivry = 'assets/images/confirm_order/delivry.png';
+  static const String confirmOrderMan = 'assets/images/confirm_order/man.png';
+  static const String confirmOrderMap = 'assets/images/confirm_order/map.png';
+  static const String confirmOrderPickingItems = 'assets/images/confirm_order/picking_items.png';
+  static const String confirmOrderStar = 'assets/images/confirm_order/star.png';
+  static const String confirmOrderTelephone = 'assets/images/confirm_order/telephone.png';
   static const String fontsBalooDaRegular = 'assets/fonts/BalooDa-Regular.ttf';
   static const String fontsHelvetica = 'assets/fonts/Helvetica.ttf';
   static const String fontsInter18ptBold = 'assets/fonts/Inter_18pt-Bold.ttf';

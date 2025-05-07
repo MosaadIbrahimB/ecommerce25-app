@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/configure/route/app_route.dart';
 import 'feature/home/presentation/control/home/home_cubit.dart';
+import 'feature/map/presentation/screen/map_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,8 +14,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Modern Authentication',
-        // home: AddRoomPage(),
-        onGenerateRoute: AppRoute.onGenerateRoute,
+        home: MapScreen(),
+        // onGenerateRoute: AppRoute.onGenerateRoute,
       ),
     );
   }
