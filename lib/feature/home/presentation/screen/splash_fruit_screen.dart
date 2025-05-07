@@ -1,6 +1,8 @@
+import 'package:ecommerce25_app/core/configure/route/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce25_app/core/utils/app_color.dart';
 import 'package:ecommerce25_app/feature/home/presentation/screen/home_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashFruitScreen extends StatefulWidget {
   const SplashFruitScreen({super.key});
@@ -15,9 +17,9 @@ class _SplashFruitScreenState extends State<SplashFruitScreen> {
   void initState() {
     Future.delayed(Duration(seconds: 2), () {
       if (mounted) {
-        Navigator.pushReplacement(
+        Navigator.pushReplacementNamed(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+         AppRoute.home,
         );
       }
     });
@@ -33,7 +35,7 @@ class _SplashFruitScreenState extends State<SplashFruitScreen> {
 
         style: TextStyle(
           fontFamily: "BalooDa",
-          fontSize: 40,
+          fontSize: 48.sp,
           fontWeight: FontWeight.w400,
           color: AppColor.green
         ),

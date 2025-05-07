@@ -1,8 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart' ;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/repo/repo.dart';
-import 'item_slider_Widget.dart';
+import 'item_slider_widget.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
  final  List<Widget> items = List.generate(
@@ -19,13 +20,13 @@ class CarouselSliderWidget extends StatelessWidget {
     return CarouselSlider(
       items: items,
       options: CarouselOptions(
-        height: 160,
+        height: 150.h,
         aspectRatio: 1,
         viewportFraction: 0.8,
         initialPage: 0,
         enableInfiniteScroll: true,
         reverse: false,
-        autoPlay: false,
+        autoPlay: true,
         autoPlayInterval: Duration(seconds: 3),
         autoPlayAnimationDuration: Duration(milliseconds: 800),
         autoPlayCurve: Curves.linear,

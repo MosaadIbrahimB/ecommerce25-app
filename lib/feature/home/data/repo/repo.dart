@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../cart/data/model/add_note_model.dart';
-import '../../presentation/widget/item_slider_Widget.dart';
+import '../../presentation/widget/item_slider_widget.dart';
 import '../model/carousel_slider_model.dart';
 import '../model/product_model.dart';
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/utils/app_text_style.dart';
@@ -14,9 +15,10 @@ class DataCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15.0, top: 12),
+      padding: const EdgeInsets.only(left: 15.0, top: 12).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             productModel == null
@@ -25,15 +27,15 @@ class DataCardWidget extends StatelessWidget {
 
             style: AppTextStyle.inter16BlackW700,
           ),
-          SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               SvgPicture.asset(
                 "assets/images/fruit/star.svg",
-                width: 25,
+                width: 20.w,
               ),
-              SizedBox(width: 12),
+              SizedBox(width: 12.w),
               Text(
                 productModel == null
                     ? "4.8 (287)"
@@ -43,7 +45,7 @@ class DataCardWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 12),
+          SizedBox(height: 12.h),
           Text(
             productModel == null
                 ? "\$3.99"

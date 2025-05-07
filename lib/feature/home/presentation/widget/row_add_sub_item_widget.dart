@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/model/product_model.dart';
 import '../control/home/home_cubit.dart';
@@ -18,12 +19,14 @@ class RowAddSubItemWidget extends StatelessWidget {
           bottom: 8,
           right: 8,
           child: Container(
+
             decoration: BoxDecoration(
               color:
               productModel?.count != 0 ? Colors.white : Colors.transparent,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 productModel?.count != 0
                     ? Row(

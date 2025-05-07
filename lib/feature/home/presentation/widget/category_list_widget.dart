@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/model/category_model.dart';
 import 'item_category_widget.dart';
@@ -19,7 +20,7 @@ class CategoryListWidget extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.separated(
-        separatorBuilder: (context, index) => SizedBox(width: 15),
+        separatorBuilder: (context, index) => SizedBox(width: 15.w),
         scrollDirection: Axis.horizontal,
         itemCount: listCategory.length,
         itemBuilder:

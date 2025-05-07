@@ -1,4 +1,5 @@
 import 'package:ecommerce25_app/feature/confirmOrder/presentation/screen/confirm_order.dart';
+import 'package:ecommerce25_app/feature/home/presentation/screen/splash_fruit_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce25_app/feature/checkout/presentation/screen/check_out_screen.dart';
 import 'package:ecommerce25_app/feature/payment/presentation/screen/payment_screen.dart';
@@ -9,7 +10,8 @@ import '../../../feature/map/presentation/screen/map_screen.dart';
 
 class AppRoute{
 
-  static const String home='/';
+  static const String splash='/';
+  static const String home='/home';
   static const String cart='/cart';
   static const String checkout='/checkout';
   static const String payment='/payment';
@@ -21,6 +23,8 @@ class AppRoute{
 
     switch(routSetting.name){
       case "/":
+        return MaterialPageRoute(builder: (context) => SplashFruitScreen());
+      case AppRoute.home:
         return MaterialPageRoute(builder: (context) => HomeScreen());
       case "/cart":
         return MaterialPageRoute(builder: (context) => CartScreen());

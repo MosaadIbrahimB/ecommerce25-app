@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_text_style.dart';
@@ -11,18 +12,18 @@ class ItemSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 200.h,
       decoration: BoxDecoration(
         color:
         carouselSliderModel == null
             ? AppColor.green100
             : carouselSliderModel?.backColor,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12).r,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(width: 5),
+          SizedBox(width: 5.w),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +34,7 @@ class ItemSliderWidget extends StatelessWidget {
                     : carouselSliderModel!.offer,
                 style: AppTextStyle.inter16BlackW700.copyWith(fontSize: 18),
               ),
-              SizedBox(height: 4),
+              SizedBox(height: 4.h),
               Text(
                 "Enjoy our big offer",
                 style: AppTextStyle.inter16BlackW700.copyWith(
@@ -41,9 +42,9 @@ class ItemSliderWidget extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Container(
-                width: 100,
+                width: 100.w,
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -53,7 +54,7 @@ class ItemSliderWidget extends StatelessWidget {
                   child: Text(
                     "Shop Now",
                     style: AppTextStyle.inter16BlackW700.copyWith(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       // color: Colors.white
                     ),
                   ),
@@ -62,8 +63,8 @@ class ItemSliderWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: 150,
-            height: 120,
+            width: 150.w,
+            height: 120.h,
             // color: Colors.red,
             child: Image.asset(
               fit: BoxFit.fill,
