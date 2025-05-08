@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/feature/favourite/presentation/screen/favourite_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../search/presentation/screen/search_screen.dart';
 import '../control/home/home_cubit.dart';
 import '../widget/app_bar_fruits_widget.dart';
@@ -33,7 +34,13 @@ class HomeScreen extends StatelessWidget {
                 curve: Curves.easeInOut,
                 bottom:
                     BlocProvider.of<HomeCubit>(context).getView() ? 0 : -200,
-                child: Center(child: ContainerGreenItemBagWidget()),
+                child: Center(child: Column(
+                  children: [
+                    ContainerGreenItemBagWidget(),
+                    Container(color:Colors.white70,height: 10.h,width: 20,),
+
+                  ],
+                )),
               ),
             ],
           );

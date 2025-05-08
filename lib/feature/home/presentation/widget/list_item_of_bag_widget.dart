@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/repo/repo.dart';
 import 'custom_badge_widget.dart';
@@ -12,8 +13,8 @@ class ListItemOfBagWidget extends StatelessWidget {
       child: ListView.separated(
         physics: BouncingScrollPhysics(),
         reverse: true,
-        padding: EdgeInsets.symmetric(horizontal: 8),
-        separatorBuilder: (context, index) => SizedBox(width: 8),
+        padding: EdgeInsets.symmetric(horizontal: 8).r,
+        separatorBuilder: (context, index) => SizedBox(width: 8.w),
         scrollDirection: Axis.horizontal,
         itemCount: Repo.bagProduct.length,
         itemBuilder: (context, index) {

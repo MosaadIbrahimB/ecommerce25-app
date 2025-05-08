@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_text_style.dart';
 import '../../data/model/carousel_slider_model.dart';
+
 class ItemSliderWidget extends StatelessWidget {
   const ItemSliderWidget({super.key, this.carouselSliderModel});
 
@@ -12,12 +13,12 @@ class ItemSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200.h,
+      // height: 170.h,
       decoration: BoxDecoration(
-        color:
-        carouselSliderModel == null
-            ? AppColor.green100
-            : carouselSliderModel?.backColor,
+         color:
+            carouselSliderModel == null
+                ? AppColor.green100
+                : carouselSliderModel?.backColor,
         borderRadius: BorderRadius.circular(12).r,
       ),
       child: Row(
@@ -32,22 +33,25 @@ class ItemSliderWidget extends StatelessWidget {
                 carouselSliderModel == null
                     ? "Up to 30% offer"
                     : carouselSliderModel!.offer,
-                style: AppTextStyle.inter16BlackW700.copyWith(fontSize: 18),
+                style: AppTextStyle.inter16BlackW700.copyWith(
+                  fontSize: 20.sp,
+                  color: carouselSliderModel!.colorFont,
+                ),
               ),
               SizedBox(height: 4.h),
               Text(
                 "Enjoy our big offer",
                 style: AppTextStyle.inter16BlackW700.copyWith(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.normal,
+                  color: carouselSliderModel!.colorEnjoyOffer
                 ),
               ),
               SizedBox(height: 20.h),
               Container(
-                width: 100.w,
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: carouselSliderModel!.backGroundColorButton,
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Center(
@@ -55,7 +59,7 @@ class ItemSliderWidget extends StatelessWidget {
                     "Shop Now",
                     style: AppTextStyle.inter16BlackW700.copyWith(
                       fontSize: 16.sp,
-                      // color: Colors.white
+                      color: carouselSliderModel!.colorFontButton
                     ),
                   ),
                 ),

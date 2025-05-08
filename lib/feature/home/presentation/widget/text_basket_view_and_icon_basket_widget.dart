@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/utils/app_text_style.dart';
@@ -27,26 +28,26 @@ class TextBasketViewAndIconBasketWidget extends StatelessWidget {
           goToCheck == false ? title : "$title ($check)",
           style: AppTextStyle.inter16BlackW700.copyWith(
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 16.sp,
           ),
         ),
         SizedBox(width: MediaQuery.sizeOf(context).width * .03),
         count != 0
             ? badges.Badge(
-              position: badges.BadgePosition.topEnd(top: -22, end: 7),
+              position: badges.BadgePosition.topEnd(top: -16.h, end: 6.w),
               badgeContent: Text(
                 "$count",
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 17.sp, color: Colors.white),
               ),
               child: SvgPicture.asset(
                 "assets/images/fruit/bage.svg",
-                width: 25,
+                width: 25.w,
                 color: Colors.white,
               ),
             )
             : SvgPicture.asset(
               "assets/images/fruit/bage.svg",
-              width: 25,
+              width: 25.w,
               color: Colors.white,
             ),
       ],

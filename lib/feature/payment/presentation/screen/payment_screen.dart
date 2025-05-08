@@ -4,6 +4,7 @@ import 'package:ecommerce25_app/core/utils/app_text_style.dart';
 import 'package:ecommerce25_app/feature/cart/data/model/add_note_model.dart';
 import 'package:ecommerce25_app/feature/cart/presentation/widget/add_note_widget.dart';
 import 'package:ecommerce25_app/feature/payment/presentation/widget/app_bar_payment_screen_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../checkout/presentation/widgets/button_green_widget.dart';
 import '../../../checkout/presentation/widgets/custom_card_credit_widget.dart';
@@ -23,7 +24,7 @@ class PaymentScreen extends StatelessWidget {
           builder: (context, state) {
             var cubit = BlocProvider.of<PaymentCubit>(context);
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding: const EdgeInsets.symmetric(horizontal: 12.0).r,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

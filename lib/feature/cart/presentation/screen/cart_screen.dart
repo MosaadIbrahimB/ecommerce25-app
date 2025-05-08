@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/core/utils/app_text_style.dart';
 import 'package:ecommerce25_app/feature/home/presentation/control/home/home_cubit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/app_color.dart';
 import '../../../home/presentation/widget/list_item_of_bottom_sheet_widget.dart';
 import '../../../home/presentation/widget/product_list_widget.dart';
@@ -53,11 +54,11 @@ class CartScreen extends StatelessWidget {
                     stopPauseOnTap: true,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
 
                 HorizontalLineWidget(),
 
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 //--------------------- Recommended for you -----------
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -83,7 +84,7 @@ class CartScreen extends StatelessWidget {
                   },
                   child: GoToCheckoutWidget(),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20.h),
               ],
             ),
           );

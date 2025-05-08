@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_text_style.dart';
 import '../../../cart/data/model/add_note_model.dart';
@@ -16,7 +17,7 @@ class DetailsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: AppTextStyle.inter16BlackW700),
-        SizedBox(height: 10),
+        SizedBox(height: 8.h),
         Column(
           children: list.map((e) => AddNoteWidget(addNoteModel: e)).toList(),
         ),

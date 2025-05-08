@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/feature/cart/data/model/add_note_model.dart';
 import 'package:ecommerce25_app/feature/home/presentation/control/home/home_cubit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../home/data/repo/repo.dart';
 import '../widgets/app_bar_check_out_screen_widget.dart';
@@ -28,18 +29,18 @@ class CheckOutScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   DetailsWidget(title: "Details", list: Repo.detailList),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   DetailsWidget(title: "Address", list: Repo.addressList),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   DetailsWidget(title: "Have Coupon ?", list: Repo.haveCouponList),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   DetailsWidget(title: "Delivery ", list: Repo.deliveryList),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   DetailsWidget(
                     title: "Order Summary ( $item items)",
                     list: cubit.orderSummaryList,
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   DetailsWidget(
                     title: "Payment method",
                     list: [
@@ -50,12 +51,12 @@ class CheckOutScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   ButtonGreenWidget(title:"Place Order"
                      ,onTap: (){
                     Navigator.pushNamed(context, "/payment");
                   },),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                 ],
               ),
             ),

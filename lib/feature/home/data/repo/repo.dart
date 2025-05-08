@@ -8,31 +8,42 @@ import '../model/product_model.dart';
 
 class Repo {
   static List<CarouselSliderModel> listCarousel = [
+    CarouselSliderModel(
+      image: "assets/images/fruit/f2.png",
+      offer: "Up to 30% offer",
+      backColor: AppColor.green100,
+      colorFont: Colors.black,
+      backGroundColorButton: AppColor.green,
+      colorFontButton: Colors.white,
+      colorEnjoyOffer: AppColor.green,
+    ),
 
     CarouselSliderModel(
-        image: "assets/images/fruit/f2.png",
-        offer: "Up to 30% offer",
-        backColor:AppColor.green100
-    ),
-    CarouselSliderModel(
-        image: "assets/images/fruit/f1.png",
-        offer: "Up to 30% offer",
-        backColor:AppColor.green
+      image: "assets/images/fruit/f1.png",
+      offer: "Up to 25% offer",
+      backColor: AppColor.green,
+
+      colorFont: Colors.white,
+      backGroundColorButton: Colors.white,
+      colorFontButton: Colors.black,
+      colorEnjoyOffer: Colors.white,
     ),
     CarouselSliderModel(
         image: "assets/images/fruit/f3.png",
         offer: "Up to 30% offer",
-        backColor:AppColor.yellow
+        backColor:AppColor.yellow,
+
+      colorFont: Colors.black,
+      backGroundColorButton: Colors.white,
+      colorFontButton: Colors.black,
+      colorEnjoyOffer: Colors.black45,
+
     ),
-
   ];
-
 
   static List<Widget> items = List.generate(
     listCarousel.length,
-    (index) => ItemSliderWidget(
-      carouselSliderModel: listCarousel[index],
-    ),
+    (index) => ItemSliderWidget(carouselSliderModel: listCarousel[index]),
   );
 
   static final List<ProductModel> listProduct = [
@@ -110,14 +121,9 @@ class Repo {
     ),
   ];
 
-  static final List<ProductModel> bagProduct = [
+  static final List<ProductModel> bagProduct = [];
 
-
-  ];
-
-
-
-static  final List<AddNoteModel> detailList = [
+  static final List<AddNoteModel> detailList = [
     AddNoteModel(
       pathImage: "assets/images/checkout/person.png",
       title: "Kinglsey Ezechukwu",
@@ -129,21 +135,21 @@ static  final List<AddNoteModel> detailList = [
       widget: Icon(Icons.arrow_forward_ios, size: 22),
     ),
   ];
-static  final List<AddNoteModel> addressList = [
+  static final List<AddNoteModel> addressList = [
     AddNoteModel(
       pathImage: "assets/images/checkout/location.png",
       title: "Apartment 609 \n45 Soho Loop street birmingham",
       widget: Icon(Icons.arrow_forward_ios, size: 22),
     ),
   ];
-static  final List<AddNoteModel> haveCouponList = [
+  static final List<AddNoteModel> haveCouponList = [
     AddNoteModel(
       pathImage: "assets/images/checkout/coupon.png",
       title: "Apply Coupon",
       widget: Icon(Icons.arrow_forward_ios, size: 22),
     ),
   ];
-static  final List<AddNoteModel> deliveryList = [
+  static final List<AddNoteModel> deliveryList = [
     AddNoteModel(
       pathImage: "assets/images/checkout/priority.png",
       title: "Priority  (10 -20 mins)",
@@ -164,7 +170,4 @@ static  final List<AddNoteModel> deliveryList = [
       widget: Icon(Icons.arrow_forward_ios, size: 22),
     ),
   ];
-
-
 }
-

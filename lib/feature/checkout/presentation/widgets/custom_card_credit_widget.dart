@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/feature/checkout/presentation/widgets/type_credit_card_widget.dart';
 import 'package:ecommerce25_app/feature/home/presentation/control/home/home_cubit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_text_style.dart';
 import 'button_green_widget.dart';
@@ -22,7 +23,7 @@ class CustomCardCreditWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 10),
+        SizedBox(height: 8.h),
 
         Text(
           "Card number",
@@ -30,13 +31,12 @@ class CustomCardCreditWidget extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 8.h),
         Container(
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(8).r,
           decoration: BoxDecoration(
-            // color: Colors.red,
             border: Border.all(color: Colors.black12),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8).r,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,15 +62,15 @@ class CustomCardCreditWidget extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Container(
-                  height: 45,
+                  height: 45.h,
                   width: MediaQuery.sizeOf(context).width * .45,
-                  padding: EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8).r,
                   decoration: BoxDecoration(
                     // color: Colors.red,
                     border: Border.all(color: Colors.black12),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(8).r,
                   ),
 
                   child: ExpiryDateField(controller: dateController),
@@ -86,15 +86,15 @@ class CustomCardCreditWidget extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Container(
-                  height: 45,
+                  height: 45.h,
                   width: MediaQuery.sizeOf(context).width * .45,
-                  padding: EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8).r,
                   decoration: BoxDecoration(
                     // color: Colors.red,
                     border: Border.all(color: Colors.black12),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(8).r,
                   ),
 
                   child: Row(
@@ -104,8 +104,8 @@ class CustomCardCreditWidget extends StatelessWidget {
                         child: CVCField(controller: cVCControl),
                       ),
                       SizedBox(
-                        height: 20,
-                        width: 20,
+                        height: 20.h,
+                        width: 20.w,
                         child: Image.asset(
                           "assets/images/pay/cvc.png",
                         ),
@@ -118,7 +118,7 @@ class CustomCardCreditWidget extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20,),
+        SizedBox(height: 20.h,),
         ButtonGreenWidget
           (
           onTap: (){

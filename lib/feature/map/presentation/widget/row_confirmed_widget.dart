@@ -1,5 +1,6 @@
 import 'package:ecommerce25_app/feature/map/presentation/data/row_confirmed_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_text_style.dart';
 class RowConfirmedWidget extends StatelessWidget {
@@ -14,17 +15,17 @@ class RowConfirmedWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(
-          height: 30,
-          width: 40,
+          height: 30.h,
+          width: 40.w,
           child: Image.asset(rowConfirmedModel.pathImage, fit: BoxFit.fill),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 10.h),
         FittedBox(
           child: Text(
             rowConfirmedModel.title,
             style: AppTextStyle.inter16BlackW700.copyWith(
               color: Colors.green,
-              fontSize: 11,
+              fontSize: 14.sp,
             ),
           ),
         ),

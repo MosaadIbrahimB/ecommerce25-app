@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ecommerce25_app/feature/home/presentation/widget/view_basket_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/app_color.dart';
 import '../control/home/home_cubit.dart';
 import 'list_item_of_bag_widget.dart';
@@ -19,16 +20,16 @@ class ContainerGreenItemBagWidget extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: AppColor.green,
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(8.r),
                   ),
                   width: MediaQuery.sizeOf(context).width * .95,
-                  height: 75,
+                  height: 50.h,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ListItemOfBagWidget(),
                       Container(
-                        width: 1,
+                        width: 1.w,
                         height: MediaQuery.of(context).size.height * .060,
                         color: Colors.white,
                       ),

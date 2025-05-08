@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_color.dart';
 import '../../../../core/utils/app_text_style.dart';
@@ -13,10 +14,10 @@ class GoToCheckoutWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColor.green,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.circular(12).r,
       ),
       width: MediaQuery.sizeOf(context).width * .95,
-      height: 55,
+      height: 45.h,
       child: Center(
         child: Text(
           "Go to checkout",
