@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.   
+ application that displays products, allows users to add them to favorites, and complete the payment process easily.
 
 
 ui :- https://www.figma.com/design/3guayTzbjWpxIX8ibqShmD/Grabber-Grocrey-App--Community  
